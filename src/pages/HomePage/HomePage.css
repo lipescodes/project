@@ -1,0 +1,25 @@
+.goto_button{
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+}
+
+.reaction{
+    width: 150px;
+    height: 150px;
+}
+
+.sad{
+    background-image: url("../../assets/imgs/sad.png");
+    background-size: cover;
+  
+}
+
+.happy{
+    background-image: url("../../assets/imgs/happy.png");
+    background-size: cover;
+}
+
+.like-buttons{
+    display: grid;
+}
