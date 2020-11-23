@@ -1,0 +1,25 @@
+.products-content{
+    height: 92%;
+}
+
+.categories > ul{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style-type: none;
+    font-size: 1.2rem;
+
+}
+
+/* .products-list{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+} */
+/* .products-list{
+    padding-top: 10%;
+} */

@@ -8,6 +8,10 @@ import {
   Route
 } from "react-router-dom";
 import ProductsPage from './pages/ProductsPage/ProductsPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ServicesPage from './pages/ServicesPage/ServicesPage';
+import SingleProductPage from './pages/ProductsPage/SingleProductPage/SingleProductPage';
+import NavigationMenu from './components/NavigationComponents/NavigationMenu/NavigationMenu';
 
 function App() {
   return (
@@ -15,10 +19,19 @@ function App() {
     // <Something>
     <Router>
       <div className="App">
-        <h1 className="text-center pt-5">My first React site!! It's will be a webshop, i hope :) </h1>
+        <NavigationMenu></NavigationMenu>
         <Switch>
           <Route path="/products">
             <ProductsPage></ProductsPage>
+          </Route>
+          <Route path="/products/:id">
+            <SingleProductPage></SingleProductPage>
+          </Route>
+          <Route path="/service">
+            <ServicesPage></ServicesPage>
+          </Route>
+          <Route path="/about">
+            <AboutPage></AboutPage>
           </Route>
           <Route path="/404">
             <h1>404</h1>

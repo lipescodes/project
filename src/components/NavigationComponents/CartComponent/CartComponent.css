@@ -1,0 +1,24 @@
+.cart-conatiner{
+    position: fixed;
+    display: none;
+    left: 3%;
+    top: 3%;
+}
+
+.cart-conatiner a{
+    color: white;
+}
+.cart-conatiner a:hover{
+    color: white;
+}
+
+#cart-badge{
+    background-color: #ff8906;
+    color: white;
+    padding: 0px 6px;
+    border-radius: 5px;
+    font-weight: 900;
+    position: absolute;
+    top: -30%;
+    right: -75%;
+}

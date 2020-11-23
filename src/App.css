@@ -1,8 +1,8 @@
 .App {
   text-align: center;
   height: 100vh;
-  overflow: hidden;
-  background-color: darkgoldenrod;
+  background-color: #0f0e17;
+  color: #a7a9be;
 }
 
 .App-logo {
@@ -39,3 +39,37 @@
     transform: rotate(360deg);
   }
 }
+
+/* button {
+  background-color: #ff8906!important;
+  color: #fffffe!important;
+}
+
+.def-button{
+  background-color: #ff8906;
+  color: #fffffe;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fffffe;
+}
+
+p {
+  color: #a7a9be;
+}
+
+::selection {
+  background: #ff8906; 
+}
+
+.stroke{
+  color: balck;
+}
+
+.sec_custom_color{
+  color: #f25f4c;
+}
+
+.third_custom_color{
+  color: #e53170;
+} */

@@ -1,0 +1,80 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    width: 70px;
+    height: 25px;
+}
+
+header input{
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+    z-index: 5;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+header input::before{
+    font-family: "Font Awesome 5 Free" ;
+    content: '\f0c9';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+header input:hover::before{
+    color: #ff8906;
+}
+
+header input:checked::before{
+    content: '\f00d';
+}
+
+header a {
+    position: absolute;
+    opacity: 0;
+    transform: translate(0);
+    color: #fffffe;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all .4s;
+}
+
+header a:hover{
+    color: #ff8906;
+    text-decoration: none;
+}
+
+header input:checked ~ a {
+    display: block;
+    opacity: 1;
+}
+
+header input:checked ~ a:nth-child(2){
+    transform: translate(-240px);
+}
+
+header input:checked ~ a:nth-child(3){
+    transform: translate(-140px);
+}
+
+header input:checked ~ a:nth-child(4){
+    transform: translate(100px);
+}
+
+header input:checked ~ a:nth-child(5){
+    transform: translate(210px);
+}
+

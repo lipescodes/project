@@ -1,0 +1,10 @@
+.in-proggres-jum{
+    margin-top: 15%;
+    background-color: unset!important;
+}
+
+.in-proggres-jum h1{
+    color: white;
+    font-size: 20vh;
+    text-shadow: 4px 2px #a7a9be;
+}

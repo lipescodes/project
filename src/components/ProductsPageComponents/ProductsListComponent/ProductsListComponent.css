@@ -1,0 +1,127 @@
+.product-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-container div:nth-child(n+4){
+    padding-top: 1%;
+}
+
+
+.product{
+    perspective: 2000px;
+    width: 40vh;
+    height: 40vh;
+}
+
+
+
+.sides{
+    width: inherit;
+    height: inherit;
+   /*  cursor: pointer; */
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    transition: all 0.5s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.front{
+    overflow: hidden;
+}
+
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back{
+    background-color: #fff;
+    transform: rotateX(180deg);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* .back::before{
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid #222;
+    border-radius: 10px;
+    transform: translateZ(100px);
+} */
+
+.back p {
+    transform: translateZ(100px);
+    color: #222;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 0 25px;
+}
+ .back h2{
+     color:black;
+ }
+
+ .back a {
+     position: absolute;
+     bottom: 4%;
+     right: 5%;
+     height: 30px;
+     text-decoration: none!important;
+     padding-top: 4px;
+     width: 50px;
+     margin: auto;
+     cursor: pointer;
+     color: #fffffe;
+     background-color: #ff8906;
+     border-radius: 10px;
+
+ }
+
+ .back button{
+     position: absolute;
+     bottom: 4%;
+     left: 5%;
+     height: 30px;
+     background-color: #4bb543;
+     color: #fffffe;
+     border: 1px solid white;
+     border-radius: 10px;
+     outline: none;
+ }
+
+ .back button:focus{
+    outline: none;
+ }
+ 
+ .back a:hover{
+     color: #fffffe;
+ }
+
+.product:hover .sides {
+    transform: rotateX(180deg);
+}
+
+.product-price{
+    position: relative;
+    margin: auto;
+}
+
