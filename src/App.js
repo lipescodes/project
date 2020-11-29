@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import HomePage from "./pages/HomePage/HomePage";
 //import logo from './logo.svg';
 import './App.css';
@@ -14,6 +14,10 @@ import SingleProductPage from './pages/ProductsPage/SingleProductPage/SingleProd
 import NavigationMenu from './components/NavigationComponents/NavigationMenu/NavigationMenu';
 
 function App() {
+
+  const [shoppingCart,setShoppingCart] = useState([]);
+  console.log(shoppingCart);
+
   return (
     // Wrap the app in the Router
     // <Something>
@@ -21,11 +25,11 @@ function App() {
       <div className="App">
         <NavigationMenu></NavigationMenu>
         <Switch>
-          <Route path="/products">
-            <ProductsPage></ProductsPage>
-          </Route>
-          <Route path="/products/:id">
+        <Route path="/products/:id">
             <SingleProductPage></SingleProductPage>
+          </Route>
+          <Route path="/products">
+            <ProductsPage setShoppingCart={setShoppingCart} shoppingCart={shoppingCart}></ProductsPage> 
           </Route>
           <Route path="/service">
             <ServicesPage></ServicesPage>

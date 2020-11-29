@@ -3,19 +3,23 @@ import {Link} from "react-router-dom";
 import BuyButton from '../BuyButton';
 
 export default function ProductElementComponent(props) {
-    const product = {...props};
-   
+    const { shoppingCart, setShoppingCart, productImageUrl, productName, productShortDescription, productId , productPrice} = props;
+
     return (
         <div className="product col-4">
             <div className="sides">
-                <div className="front"> <img src={product.productImageUrl}></img></div>
+                <div className="front"> <img src={productImageUrl}></img></div>
                 <div className="back">
-                    <h2>{product.productName}</h2>
-                    <p>{product.productShortDescription}</p>
+                    <h2>{productName}</h2>
+                    <p>{productShortDescription}</p>
                     <div className="row">
-                        <BuyButton productId={product.productId}></BuyButton>
-                            <p className="product-price">{product.productPrice + ' $'}</p>
-                        <Link to={`products/${product.productId}`}>View</Link>
+                        <BuyButton 
+                            boughtProduct={{productId,productImageUrl,productPrice,productName,productShortDescription}} 
+                            setShoppingCart={setShoppingCart} 
+                            shoppingCart={shoppingCart}>
+                        </BuyButton>
+                            <p className="product-price">{productPrice + ' $'}</p>
+                        <Link to={`products/${productId}`}>View</Link>
                     </div>
                 </div>
             </div>

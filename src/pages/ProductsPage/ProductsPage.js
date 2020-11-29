@@ -2,7 +2,11 @@ import React from 'react';
 import "./ProductsPage.css";
 import CategoriesList from "../../components/ProductsPageComponents/CategoriesComponent/CategoriesList";
 import ProductsListComponent from "../../components/ProductsPageComponents/ProductsListComponent/ProductsListComponent";
-const ProductsPage = () => {
+
+const ProductsPage = (props) => {
+
+    const { setShoppingCart, shoppingCart } = props;
+
     return  <div className="container-fluid row products-content">
                
 
@@ -11,7 +15,7 @@ const ProductsPage = () => {
                     <CategoriesList></CategoriesList>
                 </div>
                 <div className="col-9 justify-content-center">
-                    <ProductsListComponent></ProductsListComponent>
+                    <ProductsListComponent setShoppingCart={setShoppingCart} shoppingCart={shoppingCart}></ProductsListComponent>
                 </div>
                 
                 {/* Product list */}
