@@ -12,24 +12,29 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import SingleProductPage from './pages/ProductsPage/SingleProductPage/SingleProductPage';
 import NavigationMenu from './components/NavigationComponents/NavigationMenu/NavigationMenu';
+import CartPage from './pages/CartPage/CartPage';
 
 function App() {
 
   const [shoppingCart,setShoppingCart] = useState([]);
-  console.log(shoppingCart);
+  const [showList, setShowList] = useState(false);
 
+  
   return (
     // Wrap the app in the Router
     // <Something>
     <Router>
       <div className="App">
-        <NavigationMenu></NavigationMenu>
+        <NavigationMenu shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} showList={showList} setShowList={setShowList}></NavigationMenu>
         <Switch>
         <Route path="/products/:id">
             <SingleProductPage></SingleProductPage>
           </Route>
           <Route path="/products">
             <ProductsPage setShoppingCart={setShoppingCart} shoppingCart={shoppingCart}></ProductsPage> 
+          </Route>
+          <Route path="/cart">
+            <CartPage shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} setShowList={setShowList} ></CartPage>
           </Route>
           <Route path="/service">
             <ServicesPage></ServicesPage>

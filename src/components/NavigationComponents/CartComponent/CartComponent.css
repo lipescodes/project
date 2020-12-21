@@ -1,24 +1,69 @@
-.cart-conatiner{
+.cart-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+
+    display: grid;
+    z-index: 10;   
+}
+
+.cart-container a{
+    color: white;
     position: fixed;
-    display: none;
     left: 3%;
     top: 3%;
 }
-
-.cart-conatiner a{
+.cart-container a:hover{
     color: white;
 }
-.cart-conatiner a:hover{
+.cart-icon{
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    left: 3%;
+    top: 3%;
+}
+.cart-icon:hover{
     color: white;
 }
 
 #cart-badge{
     background-color: #ff8906;
     color: white;
+    z-index: 15;
     padding: 0px 6px;
     border-radius: 5px;
     font-weight: 900;
     position: absolute;
-    top: -30%;
-    right: -75%;
+    left: 31%;
+    margin-top: 3%;
+}
+
+.cart-list-container{
+    margin-top: 25%;
+}
+
+.cancel-item{
+    font-size: 17px;
+    font-weight: 900;
+    color: red;
+    padding-left: 10%;
+    cursor: pointer;
+}
+
+.total-price{
+    border-top: 1px solid rgba(250,250,250, 0.2);
+    padding-top: 5px;
+}
+
+#lets-buy{
+    position: relative;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+#lets-buy:hover{
+    color: #4fca31;
+    background-color: rgba(31, 31, 31, 0.466);
 }

@@ -5,19 +5,45 @@ export default function BuyButton(props/* {boughtProduct:{...product}} */) {
  
 
     const clickHandler = () => {
-        console.log(boughtProduct)
-        /* Badge thing */
-        const cart = document.getElementById("cart-badge");
-        cart.parentElement.style.display = "block";
-        if (cart.textContent.length > 0) {
-            cart.textContent = parseInt(cart.textContent) + 1;
+        console.log(boughtProduct);
+       // console.log(shoppingCart.length);
+        
+       
+        boughtProduct.count = 1;
+        let diferetProducts = shoppingCart.filter(element => {
+            return element.productId !== boughtProduct.productId;
+        })
+
+        if(diferetProducts.length <= 0){
+            shoppingCart.map(el => {
+                if (el.productId !== boughtProduct.productId) {
+                    diferetProducts.push(el);
+                }
+            })
+        }
+        
+        const countedProduct = shoppingCart.filter(el =>{
+            return el.productId === boughtProduct.productId;
+        })
+
+        if (countedProduct.length > 0) {
+            countedProduct[0].count++;
+            setShoppingCart([...diferetProducts, countedProduct[0]]); 
         }else{
-            cart.textContent = 1;
-        }  
-        /* Badge thing END */
-
-        setShoppingCart([...shoppingCart, boughtProduct]); 
-
+  
+            setShoppingCart([...diferetProducts, boughtProduct]); 
+        }
+      
+        //const cartBadge = document.getElementById("cart-badge")
+        //cartBadge.textContent = shoppingCart.length;
+      /*   const cart = document.getElementById("cart-badge");
+            cart.parentElement.style.display = "grid"; */
+            /* if (cart.textContent.length > 0) {
+           
+                cart.textContent = shoppingCart.length;
+            }else{
+                cart.textContent = 1;
+            }   */
     }
 
     return (
@@ -25,15 +51,3 @@ export default function BuyButton(props/* {boughtProduct:{...product}} */) {
     )
 }
 
-/*
-    const [state,setState] = useState();
-
-    return (<BlaBla state={state} setState={setState}>)
-
-
-    function BlaBla(props) {
-        const {state,setState} = props;
-
-    }
-
-*/
