@@ -33,17 +33,7 @@ export default function BuyButton(props/* {boughtProduct:{...product}} */) {
   
             setShoppingCart([...diferetProducts, boughtProduct]); 
         }
-      
-        //const cartBadge = document.getElementById("cart-badge")
-        //cartBadge.textContent = shoppingCart.length;
-      /*   const cart = document.getElementById("cart-badge");
-            cart.parentElement.style.display = "grid"; */
-            /* if (cart.textContent.length > 0) {
-           
-                cart.textContent = shoppingCart.length;
-            }else{
-                cart.textContent = 1;
-            }   */
+
     }
 
     return (

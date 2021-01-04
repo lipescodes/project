@@ -13,6 +13,8 @@ import ServicesPage from './pages/ServicesPage/ServicesPage';
 import SingleProductPage from './pages/ProductsPage/SingleProductPage/SingleProductPage';
 import NavigationMenu from './components/NavigationComponents/NavigationMenu/NavigationMenu';
 import CartPage from './pages/CartPage/CartPage';
+import ReduxTest from './components/ReduxTest';
+import ReduxHomework from './components/ReduxHomework';
 
 function App() {
 
@@ -41,6 +43,12 @@ function App() {
           </Route>
           <Route path="/about">
             <AboutPage></AboutPage>
+          </Route>
+          <Route path="/redux-test">
+            <ReduxTest></ReduxTest>
+          </Route>
+          <Route path="/redux-homework">
+            <ReduxHomework></ReduxHomework>
           </Route>
           <Route path="/404">
             <h1>404</h1>
